@@ -1,5 +1,5 @@
 # HMLabs
-<img src="https://github.com/timsamoff/HMLabs/blob/master/site/android-chrome-192x192.png?raw=true" width="250px" alt="HMLabs">
+<img src="https://github.com/timsamoff/HMLabs/blob/master/site/android-chrome-192x192.png?raw=true" width="192px" alt="HMLabs">
 
 ## Description
 You are a black hat who is part of a loose-knit, international network of other like-minded hackers attempting to breach various government agencies. Five days ago, you received an anonymous SMS on your burner from someone who was able to successfully infiltrate ***HMLabs***, a top secret national military think tank...
