@@ -1,5 +1,3 @@
-Cookies.remove('cdTime');
-Cookies.remove('firstTime');
-Cookies.remove('gameOver');
+localStorage.removeItem('cdTime','firstTime','gameOver');
 console.log('Cookies removed.');
 window.open ('index.html','_self',false);
