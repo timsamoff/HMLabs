@@ -25,7 +25,7 @@ $(document).ready(function()
    	var quarterTime = Math.floor(totalTime * 0.25);
    	var noTime = Math.floor(totalTime * 0.05);
 
-	if (!Cookies.get('gameOver'))
+	if (!localStorage.getItem('gameOver'))
 	{
 		$('.init1').typeIt(
 		{
@@ -56,26 +56,26 @@ $(document).ready(function()
 			
 			$('<div id="cd"></div>').insertAfter('#container');
 			
-			if (!Cookies.get('cdTime'))
+			if (!localStorage.getItem('cdTime'))
 			{
 				var now = $.now(); // First time on page
-				Cookies.set('firstTime', now,
+				localStorage.setItem('firstTime', now,
 			{
 				expires: 7,
 				path: '/'
 			});
-				Cookies.set('cdTime', totalTime,
+				localStorage.setItem('cdTime', totalTime,
 				{
 					expires: 7,
 					path: '/'
 				});
-				var runTimer = Cookies.get('cdTime');
+				var runTimer = localStorage.getItem('cdTime');
 			}
 			else
 			{
 				var currentTime = $.now();
-				var usedTime = (currentTime - Cookies.get('firstTime')) / 1000; // Calculate and convert into seconds
-				var runTimer = Cookies.get('cdTime') - usedTime;
+				var usedTime = (currentTime - localStorage.getItem('firstTime')) / 1000; // Calculate and convert into seconds
+				var runTimer = localStorage.getItem('cdTime') - usedTime;
 			}
 			$('#cd').countdown(
 			{
@@ -1075,10 +1075,10 @@ $(document).ready(function()
 			if (noX)
 			{
 				output.html('');
-				if (!Cookies.get('gameOver'))
+				if (!localStorage.getItem('gameOver'))
 				{
 					var now = $.now(); // First time on page
-					Cookies.set('gameOver', now,
+					localStorage.setItem('gameOver', now,
 					{
 						expires: 7,
 						path: '/'
