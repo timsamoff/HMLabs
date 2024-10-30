@@ -1169,9 +1169,33 @@ $(document).ready(function()
 			console.log('System exited.');
 			$('.processing,.exit').remove();
 			Output('<p><span>- Last access log: </span></p>');
-			$.getJSON('https://api.ipgeolocation.io/ipgeo?apiKey=4b2e177dab954ca89569a9b05e79fe4e', function(data) {
+			$.getJSON('hthttps://api.ipgeolocation.io/ipgeo?apiKey=GEOLOCATIONAPIKEY', function(data) {
 			$('.output').append('> ' + JSON.stringify(data, null, 2));
 			});
+			$.getJSON('https://api.ipgeolocation.io/ipgeo?apiKey=GEOLOCATIONAPIKEYf&fields=ip,country_name,state_prov,city,zipcode,latitude,longitude,time_zone')
+			.done(function(data) {
+				// Extract date and time from the timezone object
+				const currentDate = data.time_zone.current_time.split(' ')[0];  // Date in YYYY-MM-DD
+				const currentTime = data.time_zone.current_time.split(' ')[1].substring(0, 8);  // Time in HH:MM:SS
+        
+				// Create a formatted output with the selected fields
+				const output = `
+					<p><strong>Date:</strong> ${currentDate}<br/>
+					<strong>Time:</strong> ${currentTime}<br/>
+					<strong>IP Address:</strong> ${data.ip}<br/>
+					<strong>Country:</strong> ${data.country_name}<br/>
+					<strong>State/Province:</strong> ${data.state_prov}<br/>
+					<strong>City:</strong> ${data.city}<br/>
+					<strong>Zip Code:</strong> ${data.zipcode}<br/>
+					<strong>Latitude:</strong> ${data.latitude}<br/>
+					<strong>Longitude:</strong> ${data.longitude}</p>
+				`;
+        
+				$('.output').html(output);
+			})
+    .fail(function(jqXHR, textStatus, errorThrown) {
+        console.error("Request failed: " + textStatus + ", " + errorThrown);
+    });
 			Failure();
 		}, 4000);
 	}
