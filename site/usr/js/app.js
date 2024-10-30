@@ -1169,8 +1169,8 @@ $(document).ready(function()
 			console.log('System exited.');
 			$('.processing,.exit').remove();
 			Output('<p><span>- Last access log: </span></p>');
-			$.getJSON('//api.ipinfodb.com/v3/ip-city/?key=25864308b6a77fd90f8bf04b3021a48c1f2fb302a676dd3809054bc1b07f5b42&format=json&callback=?', function(data) {
-				$('.output').append('> ' + JSON.stringify(data, null, 2));
+			$.getJSON('https://api.ipgeolocation.io/ipgeo?apiKey=4b2e177dab954ca89569a9b05e79fe4e', function(data) {
+			$('.output').append('> ' + JSON.stringify(data, null, 2));
 			});
 			Failure();
 		}, 4000);
