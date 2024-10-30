@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Code+Pro|Inconsolata');
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol, ul {
+  list-style: none;
+}
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background: #ccc;
+  background-repeat:no-repeat;
+  background-attachment: fixed;
+  background: -webkit-linear-gradient( to top, #fff, #ccc);
+  background: -moz-linear-gradient( to top, #fff, #ccc);
+  background: -ms-linear-gradient( to top, #fff, #ccc);
+  background: -o-linear-gradient( to top, #fff, #ccc);
+  background: linear-gradient( to top, #fff, #ccc);
+}
+@media only screen and (min-device-width: 480px) {
+  html {
+    height: 100%;
+  }
+}
+body {
+  font-family: 'Inconsolata', monospace;
+  padding: 20px;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+#paper {
+  background: #fff;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  margin: 26px auto 0;
+  max-width: 550px;
+  min-height: 300px;
+  padding: 24px;
+  position: relative;
+  width: 80%;
+}
+#paper:before, #paper:after {
+  content: "";
+  height: 98%;
+  position: absolute;
+  width: 100%;
+  z-index: -1;
+}
+#paper:before {
+  background: #fafafa;
+  box-shadow: 0 0 8px rgba(0,0,0,0.2);
+  left: -5px;
+  top: 4px;
+  transform: rotate(-2.5deg);
+}
+#paper:after {
+  background: #f6f6f6;
+  box-shadow: 0 0 3px rgba(0,0,0,0.2);
+  right: -3px;
+  top: 1px;
+  transform: rotate(1.4deg);
+}
+
+#paper header {
+  width: 100%;
+  text-align: center;
+}
+#paper header h1 {
+  font-size: 60px;
+  line-height: 60px;
+  padding: 0 0 20px;
+}
+#paper #content {
+  font-size: 24px;
+  line-height: 30px;
+}
+#paper #content p {
+  margin: 0 0 30px 0;
+}
+@media only screen and (max-device-width: 480px) {
+  #paper header h1 {
+    font-size: 40px;
+    line-height: 40px;
+  }
+  #paper #content {
+    font-size: 20px;
+    line-height: 26px;
+  }
+}
+.hi {
+  background: rgba(255, 251, 204, 1);
+}
+p.sms {
+  padding: 0 10%;
+}
+.play {
+  position: relative;
+  display: block;
+  font-family: 'Source Code Pro', 'Andale Mono', Monaco, 'Courier New', monospace;
+  font-weight: 600;
+  background: linear-gradient(
+  to bottom,
+  #27562f,
+  #27562f 50%,
+  #152e19 50%,
+  #152e19);
+  background-size: 100% 3px;
+  color: #40ff22;
+  text-align: center;
+  margin: -2px auto 0;
+  padding: 10px;
+  width: 80%;
+  border-radius: 8px;
+  /*display: none;*/
+}
+a.play, a.play:active {
+  text-decoration: none;
+  outline: none;
+  border: none;
+}
+a.play:hover {
+  cursor: pointer;
+  background: #27562f;
+  box-shadow: 0px 0px 15px 5px rgba(203,255,194,.7), inset 0px 0px 30px 0px rgba(0,0,0,0.3);
+}
+.success {
+  text-align: center;
+}
+.readMore {
+  text-align: center;
+    font-weight: 900; 
+  color: #27562f;
+}
+.readMore a:hover {
+  cursor: pointer;
+  text-decoration: underline;
+  color: #27562f;
+}
+#page2, #page3, #page4, #page5 {
+  display: none;
+}
+img {
+  margin-top: -6px;
+  width: 85%;
+}
+.survey {
+  padding: 20px 0 0;
+  margin: 0;
+  font-size: 0.8em;
+  text-align: center;
+}

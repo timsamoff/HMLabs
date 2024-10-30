@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <title>Introduction | Hacked Mechanics</title>
+    <meta charset="utf-8" />
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+	<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+	<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+	<link rel="manifest" href="manifest.json">
+	<link rel="mask-icon" href="safari-pinned-tab.svg" color="#152e19">
+	<meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+<div id="paper">
+<header>
+<h1>Hacked Mechanics</h1>
+</header>
+<div id="content">
+	<div id="page1">
+		<p>You are a black hat who is part of a loose-knit, international network of other like-minded hackers attempting to breach various government agencies. Five days ago, you received an anonymous SMS on your burner from someone who was able to successfully infiltrate HMLabs, a top secret national military think tank.</p>
+		<p class="readMore" onclick="nextPage(1);"><a>Read more &raquo;</a></p>
+	</div>
+	<div id="page2">
+		<p>During the assault on the HMLabs system, this person came across some incriminating evidence that would expose the organization&apos;s attempts to create a chemical weapon that could ultimately be unleashed on humanity &mdash; a colorless, odorless gas that would turn the recipients into mindless puppets. Further investigation also unearthed a database containing everyone who has been involved in the experiments.</p><p class="readMore" onclick="nextPage(2);"><a>Read more &raquo;</a></p>
+	</div>
+	<div id="page3">
+		<p>According to the anonymous hacker, the system performs an automatic backup process every <span class="hi">15 minutes</span>, in which all users are disconnected. Additionally, all activity in the system is logged, including all access point data.</p><p class="readMore" onclick="nextPage(3);"><a>Read more &raquo;</a></p>
+	</div>
+	<div id="page4">
+		<p>The hacker has only accessed the HMLabs system twice now, for fear of being traced. Upon the second visit &mdash; three days ago &mdash; the person found that all evidence of the chemical weapon had been moved or deleted.</p><p class="readMore" onclick="nextPage(4);"><a>Read more &raquo;</a></p>
+	</div>
+	<div id="page5">
+		<p>Today, you received another anonymous SMS stating:</p><p class="sms">"the data is still there somewhere. but i found an exploit. delete the encrypted file and bring down the whole system. exit to avoid the dragon -- don't get logged."</p><p>Do you trust the anonymous messages, or ignore them as a hoax?</p><p><a class="play" href="usr">Access HMLabs</a></p>
+	</div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+<script>
+function nextPage(pagenum)
+{
+	$('html, body').animate({ scrollTop: 0 }, 'fast');
+	$('#page'+pagenum).fadeOut('slow').remove();
+	var nextpagenum = pagenum+1;
+	$('#page'+nextpagenum).fadeIn('slow');
+}
+</script>
+
+<!-- UUID://C372DC29-DFE7-4F55-AFE0-5A7F98B387CB// -->
+
+</body>
+
+</html>
