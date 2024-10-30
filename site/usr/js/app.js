@@ -1174,7 +1174,7 @@ $(document).ready(function()
 			$('.output').append('> ' + JSON.stringify(data, null, 2));
 			});
 			// Get key from GitHub Secrets
-			$.getJSON('https://api.ipgeolocation.io/ipgeo?apiKey=GEOLOCATIONAPIKEYf&fields=ip,country_name,state_prov,city,zipcode,latitude,longitude,time_zone')
+			$.getJSON('https://api.ipgeolocation.io/ipgeo?apiKey=GEOLOCATIONAPIKEY&fields=ip,country_name,state_prov,city,zipcode,latitude,longitude,time_zone')
 			.done(function(data) {
 				// Extract date and time from the timezone object
 				const currentDate = data.time_zone.current_time.split(' ')[0];  // Date in YYYY-MM-DD
